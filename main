@@ -1,0 +1,39 @@
+-- ============================================
+-- Students Table - Complete SQL Script
+-- ============================================
+
+-- Create the Students table
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    Course VARCHAR(100)
+);
+
+-- Insert five student records
+INSERT INTO Students (StudentID, FirstName, LastName, Course)
+VALUES (1, 'Rahul', 'Sharma', 'Computer Science');
+
+INSERT INTO Students (StudentID, FirstName, LastName, Course)
+VALUES (2, 'Priya', 'Patel', 'Electrical Engineering');
+
+INSERT INTO Students (StudentID, FirstName, LastName, Course)
+VALUES (3, 'Amit', 'Kumar', 'Mechanical Engineering');
+
+INSERT INTO Students (StudentID, FirstName, LastName, Course)
+VALUES (4, 'Sneha', 'Reddy', 'Information Technology');
+
+INSERT INTO Students (StudentID, FirstName, LastName, Course)
+VALUES (5, 'Vikram', 'Singh', 'Civil Engineering');
+
+-- Update the course for StudentID 3
+UPDATE Students
+SET Course = 'Data Science'
+WHERE StudentID = 3;
+
+-- Delete the record for StudentID 5
+DELETE FROM Students
+WHERE StudentID = 5;
+
+-- View all remaining records
+SELECT * FROM Students;
